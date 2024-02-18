@@ -51,6 +51,7 @@ def get_overlay_box(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocker
   print(out_txt)
 
 #__main__
+
 # print(get_color_palette(r"zockerBoy\image\test_ad.jpg"))
 # print(get_text_overlay(r"zockerBoy\image\test_ad.jpg"))
-get_overlay_box(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg")
+# get_overlay_box(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg")
