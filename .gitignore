@@ -163,4 +163,5 @@ cython_debug/
 # custom
 # =====================================
 
-test.png
+image/test.png
+image/blinkit_1.jpg
