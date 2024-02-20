@@ -165,3 +165,4 @@ cython_debug/
 
 image/test.png
 image/blinkit_1.jpg
+image/cluster_*.*
