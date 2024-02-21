@@ -20,6 +20,11 @@
 
 1. Alternatives for object detection: yoloX, mmDetection, yoloV(4/7/8), openCV, moondream, timm
 
+### get_logo()
+
+1. Make a function to get the logo from the image
+    1. Can use logoHunter
+
 # Misc
 ## Changes made in code
 ### format: file_name - line of original code
@@ -31,4 +36,5 @@
     this gets the color palette from the image and returns the top 5 most 
 2. get_overlay_box()
     this turns the image to black and white and then ocr's the image
-3. 
+3. object_detection()
+    this uses mmDetection to detect objects in the image and returns the image with boxes around the objects
