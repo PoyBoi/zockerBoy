@@ -2,9 +2,15 @@ import cv2
 import pytesseract
 from PIL import Image
 from pytesseract import Output
+
 import matplotlib.pyplot as plt
+
 from colorthief import ColorThief
+
 from transformers import AutoModelForCausalLM, CodeGenTokenizerFast as Tokenizer
+
+import mmdet
+from mmdet.apis import DetInferencer
 # https://pytorch.org/get-started/locally/
 
 # from rudimentary_func import download_file
@@ -71,15 +77,22 @@ def obj_det(qst:str, img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocke
   print(model.answer_question(enc_image, qst, tokenizer))
 
 def object_detection(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zockerBoy\image\test_ad.jpg") -> str:
-  None
+  inferencer = DetInferencer('rtmdet_tiny_8xb32-300e_coco', device="cuda:0")
+
+  # Perform inference
+  inferencer(img_path, 
+            show=True,
+            pred_score_thr=0.4, 
+            texts= "what in this image can be sold",
+            # stuff_texts="Product",
+            # check for how enter string prompt, and what works, whatsapp image
+            )
 
 #__main__
-  
-from models\bulding\mmdet\mmdetection\mmdet\apis import Det
-  
+
 # print(get_color_palette(r"zockerBoy\image\test_ad.jpg"))
 # print(get_text_overlay(r"zockerBoy\image\test_ad.jpg"))
 # print(get_text_overlay(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg"))
 # get_overlay_box(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg")
-# get_overlay_box()
 # obj_det("What is the object in the image ?")
+# object_detection(r"C:\Users\parvs\Downloads\WhatsApp Image 2024-02-22 at 00.29.09_30f01e74.jpg")
