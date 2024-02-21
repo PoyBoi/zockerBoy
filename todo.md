@@ -16,6 +16,10 @@
     2. Need to add output cleaning using re
 4. Need to improve quality of text being read
 
+### object_detection()
+
+1. Alternatives for object detection: yoloX, mmDetection, yoloV(4/7/8), openCV, moondream, timm
+
 # Misc
 ## Changes made in code
 ### format: file_name - line of original code
