@@ -26,3 +26,10 @@
                 2. Built tracking
                 3. Test tracking on image and videos with boxes made
                     1. Used an instance of yoloX for the same (which is also commercially viable)
+4. Logo Detection:
+    1. Tried using yolov8:
+        1. Lengthy to convert dataset into yoloV8 format
+        2. Local machine cannot train efficiently enough (3060)
+        3. Bad documentation
+    2. trying to use yoloV3/4/5:
+        1. 
