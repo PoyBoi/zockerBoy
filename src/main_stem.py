@@ -83,9 +83,7 @@ def object_detection(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocke
   inferencer(img_path, 
             show=True,
             pred_score_thr=0.4, 
-            texts= "what in this image can be sold",
-            # stuff_texts="Product",
-            # check for how enter string prompt, and what works, whatsapp image
+            # texts= "what in this image can be sold",
             )
 
 #__main__
