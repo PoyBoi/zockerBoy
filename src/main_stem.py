@@ -1,17 +1,36 @@
+# ==============================
+# For the OCR
 import cv2
 import pytesseract
 from PIL import Image
 from pytesseract import Output
 
+# ===============================
+# For basic output plotting
 import matplotlib.pyplot as plt
 
+# ===============================
+# For color palette
 from colorthief import ColorThief
 
+# ===============================
+# For running moondream (deprecated)
 from transformers import AutoModelForCausalLM, CodeGenTokenizerFast as Tokenizer
 
+# ===============================
+# For running mmDetection
 import mmdet
 from mmdet.apis import DetInferencer
 # https://pytorch.org/get-started/locally/
+
+# ===============================
+# For running Object Detection and logo detection
+import io
+import subprocess
+import argparse
+from ultralytics import YOLO
+from contextlib import redirect_stdout
+
 
 # from rudimentary_func import download_file
 
@@ -86,6 +105,8 @@ def object_detection(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocke
             # texts= "what in this image can be sold",
             )
 
+
+
 #__main__
 
 # print(get_color_palette(r"zockerBoy\image\test_ad.jpg"))
@@ -93,4 +114,4 @@ def object_detection(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocke
 # print(get_text_overlay(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg"))
 # get_overlay_box(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg")
 # obj_det("What is the object in the image ?")
-# object_detection(r"C:\Users\parvs\Downloads\WhatsApp Image 2024-02-22 at 00.29.09_30f01e74.jpg")
+object_detection(r"C:\Users\parvs\Downloads\WhatsApp Image 2024-02-22 at 00.29.09_30f01e74.jpg")
