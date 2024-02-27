@@ -26,6 +26,11 @@
                 2. Built tracking
                 3. Test tracking on image and videos with boxes made
                     1. Used an instance of yoloX for the same (which is also commercially viable)
+        4. Tried yoloV8
+            1. Faster inference
+            2. Better trained model
+            3. made argparser to catch output
+                1. Checked documentation, turns out they have a thing to for that anyways
 4. Logo Detection:
     1. Tried using yolov8:
         1. Lengthy to convert dataset into yoloV8 format
