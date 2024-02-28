@@ -9,7 +9,7 @@ zockerBoy - Zocket Assignment
 - cd to the working directory "zockerBoy"
 - Install the requirements using the following command:
     ```
-    pip install -r requirements. txt
+    pip install -r requirements.txt
     ```
 - Run the following command to run the program:
     ```
