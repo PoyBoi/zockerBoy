@@ -105,7 +105,37 @@ def object_detection(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocke
             # texts= "what in this image can be sold",
             )
 
+# names = {0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5: 'bus', 6: 'train', 7: 'truck', 8: 'boat', 9: 'traffic light', 10: 'fire hydrant', 11: 'stop sign', 12: 'parking meter', 13: 'bench', 14: 'bird', 15: 'cat', 16: 'dog', 17: 'horse', 18: 'sheep', 19: 'cow', 20: 'elephant', 21: 'bear', 22: 'zebra', 23: 'giraffe', 24: 'backpack', 25: 'umbrella', 26: 'handbag', 27: 'tie', 28: 'suitcase', 29: 'frisbee', 30: 'skis', 31: 'snowboard', 32: 'sports ball', 33: 'kite', 34: 'baseball bat', 35: 'baseball glove', 36: 'skateboard', 37: 'surfboard', 38: 'tennis racket', 39: 'bottle', 40: 'wine glass', 41: 'cup', 42: 'fork', 43: 'knife', 44: 'spoon', 45: 'bowl', 46: 'banana', 47: 'apple', 48: 'sandwich', 49: 'orange', 50: 'broccoli', 51: 'carrot', 52: 'hot dog', 53: 'pizza', 54: 'donut', 55: 'cake', 56: 'chair', 57: 'couch', 58: 'potted plant', 59: 'bed', 60: 'dining table', 61: 'toilet', 62: 'tv', 63: 'laptop', 64: 'mouse', 65: 'remote', 66: 'keyboard', 67: 'cell phone', 68: 'microwave', 69: 'oven', 70: 'toaster', 71: 'sink', 72: 'refrigerator', 73: 'book', 74: 'clock', 75: 'vase', 76: 'scissors', 77: 'teddy bear', 78: 'hair drier', 79: 'toothbrush'}
 
+# if __name__ == '__main__':    
+#     def run_det(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zockerBoy\image\test_ad.jpg", dev:int = 0) -> str:
+#         model = YOLO("yolov8m.yaml")  # build a new model from scratch
+#         model = YOLO(r"zockerBoy\models\yolov8m.pt")  # load a pretrained model (recommended for training)
+#         output = []
+#         # Use the model
+#         # results = model.train(data="coco128.yaml", epochs=3, device=0, verbose=True)  # train the model
+#         # results = model.val()  # evaluate model performance on the validation set
+#         ## dev == 0 -> CPU, dev == 1 -> GPU if any
+#         try:
+#             if dev == 0:
+#                 results = model(img_path, device="cpu", verbose = True)  # predict on an image
+#             elif dev == 1:
+#                 results = model(img_path, device="cuda", verbose = True, save_dir = r"C:\Users\parvs\VSC Codes\Python-root\zockerBoy")
+#             elif dev == 2:
+#                 print("Multi GPU not supported yet")
+#             else:
+#                 print("Incorrect number specified")
+#         except Exception as e:
+#             print("No CUDA device found. ", e)
+        
+#         for i in results:
+#             boxes = i.boxes
+#             # print(boxes.conf)
+#             for i in boxes.cls:
+#                 op = str(i).split("(")[1].split(".")[0]
+#                 output.append(names[int(op)])
+
+#         return output
 
 #__main__
 
@@ -114,4 +144,5 @@ def object_detection(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocke
 # print(get_text_overlay(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg"))
 # get_overlay_box(r"C:\Users\parvs\Downloads\Fwaut2PaEAQynD4.jpg")
 # obj_det("What is the object in the image ?")
-object_detection(r"C:\Users\parvs\Downloads\WhatsApp Image 2024-02-22 at 00.29.09_30f01e74.jpg")
+# object_detection(r"C:\Users\parvs\Downloads\WhatsApp Image 2024-02-22 at 00.29.09_30f01e74.jpg")
+# print(run_det(r'C:\\Users\\parvs\\Downloads\\games_cyberpunk_posters.webp', 1))
