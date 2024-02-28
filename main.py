@@ -1,6 +1,5 @@
 from zockerBoy.src.main_stem import (get_color_palette, get_overlay_box, object_detection)
 from zockerBoy.src.logo_det import run_det
-from webcolors import rgb_to_name
 import os
 
 isAd = 3 # Will change to 4 once logo is added
