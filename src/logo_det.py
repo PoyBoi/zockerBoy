@@ -50,9 +50,9 @@ if __name__ == '__main__':
 
         return output
 
-# if args.i == None or args.d == None:
-#     print("Incorrect / Not enough variables supplied")
-# else:
-#     run_det(args.i, args.d)
+if args.i == None or args.d == None:
+    print("Incorrect / Not enough variables supplied")
+else:
+    run_det(args.i, args.d)
             
 # run_det(r'C:\\Users\\parvs\\Downloads\\games_cyberpunk_posters.webp', 1)
