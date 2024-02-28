@@ -81,7 +81,8 @@ def get_overlay_box(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocker
       ignore_var = ["|"]
       if x not in ignore_var:
         out_txt += x + " "
-  print(out_txt)
+  # print(out_txt)
+  return out_txt
 
 def obj_det(qst:str, img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zockerBoy\image\test_ad.jpg") -> str:
   # can use YOLO or moondream and maybe layer it with openCV
