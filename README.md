@@ -23,6 +23,23 @@ zockerBoy - Zocket Assignment
 
 <hr/>
 
+## Improvements:
+1. Logo Detection has not been implemented:
+    - Training was taking too long, and no suitable open-source dataset was found that gave enough accuracy to be worth adding it.
+    - Good datasets were in the 100's of the Gb's.
+2. Adding a LLM to the output:
+    - Adding a LLM would:
+        - Would make it easier to understand the output.
+        - Adding a LLM would help to convert hex code into color names.
+        - Would be helpful for people who are colorblind, would apply neccessary conversions.
+        - Will help in making it more of interactive experience.
+3. Adding a GUI:
+    - Can add gradio for a better GUI
+4. Adding better text post-processing techniques:
+    - Can use RE with a method of regex to find the text that makes sense and can filter non-sense text and single letter text.
+
+<hr/>
+
 ## Path Taken
 1. Started off with Color Palette detection:
     1. Used color thief
@@ -60,4 +77,3 @@ zockerBoy - Zocket Assignment
         2. Local machine cannot train efficiently enough (3060)
         3. Bad documentation
     2. trying to use yoloV3/4/5:
-        1. 
