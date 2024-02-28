@@ -2,3 +2,4 @@ pytesseract
 pillow
 matplotlib
 colorthief
+webcolors
