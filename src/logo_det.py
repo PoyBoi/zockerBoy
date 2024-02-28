@@ -55,4 +55,4 @@ if __name__ == '__main__':
 # else:
 #     run_det(args.i, args.d)
             
-run_det(r'C:\\Users\\parvs\\Downloads\\games_cyberpunk_posters.webp', 1)
+# run_det(r'C:\\Users\\parvs\\Downloads\\games_cyberpunk_posters.webp', 1)
