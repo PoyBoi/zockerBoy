@@ -24,7 +24,7 @@ names = {0: 'person', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'airplane', 5:
 def run_det(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zockerBoy\image\test_ad.jpg", dev:int = 0) -> str:
     try:
         model = YOLO("yolov8m.yaml")  # build a new model from scratch
-        model = YOLO(r"zockerBoy\models\yolov8m.pt")  # load a pretrained model (recommended for training)
+        model = YOLO(r"models\yolov8m.pt")  # load a pretrained model (recommended for training)
         output = []
         # Use the model
         # results = model.train(data="coco128.yaml", epochs=3, device=0, verbose=True)  # train the model
