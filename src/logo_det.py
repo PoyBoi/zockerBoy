@@ -5,7 +5,7 @@ from ultralytics import YOLO
 from contextlib import redirect_stdout
 
 # ===============================
-# making the argparse
+# Making the argparse
 # ===============================
 
 parser = argparse.ArgumentParser()
@@ -42,14 +42,13 @@ if __name__ == '__main__':
             print("No CUDA device found. ", e)
         
         for i in results:
-            # print(i)
             boxes = i.boxes
             # print(boxes.conf)
             for i in boxes.cls:
                 op = str(i).split("(")[1].split(".")[0]
                 output.append(names[int(op)])
-        print(output)
-        # success = YOLO("yolov8n.pt").export(format="onnx")  # export a model to ONNX format
+
+        return output
 
 # if args.i == None or args.d == None:
 #     print("Incorrect / Not enough variables supplied")
