@@ -168,3 +168,4 @@ image/blinkit_1.jpg
 image/cluster_*.*
 *.yaml
 *.tfevents.*
+test.py
