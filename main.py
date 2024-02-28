@@ -7,3 +7,7 @@ img_path = r'C:\\Users\\parvs\\Downloads\\games_cyberpunk_posters.webp'
 getPalette = get_color_palette(img_path)
 textOCR = get_overlay_box(img_path)
 objDetection = run_det(img_path, 1)
+
+print(
+    "Color pallete is: {}, \n Overlayed text says: {}, \n, Objects detected are: {}".format(getPalette, textOCR, objDetection)
+)
