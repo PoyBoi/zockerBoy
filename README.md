@@ -1,4 +1,16 @@
-# zockerBoy
+<h1 align="center">
+zockerBoy - Zocket Assignment
+</h1>
+
+<hr/>
+
+## Usage
+
+- cd to the working directory "zockerBoy"
+- Install the requirements using the following command:
+    ```
+    pip install -r requirements. txt
+    ```
 
 ## Path Taken
 1. Started off with Color Palette detection:
