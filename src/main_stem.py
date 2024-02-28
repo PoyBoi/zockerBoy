@@ -12,6 +12,9 @@ import matplotlib.pyplot as plt
 # ===============================
 # For color palette
 from colorthief import ColorThief
+# from webcolors import rgb_to_name
+# import matplotlib.colors as mcolors
+from colour import Color
 
 # ===============================
 # For running moondream (deprecated)
@@ -37,12 +40,25 @@ from contextlib import redirect_stdout
 def get_color_palette(img_path:str = r"zockerBoy\image\test_ad.jpg") -> list:
   try:    
     ct = ColorThief(img_path)
+    opPalette = []
 
     palette = ct.get_palette(color_count=5)
     plt.imshow([[palette[i] for i in range(5)]])
     plt.show()
 
-    return palette
+    for i in palette:
+      r, g, b = i
+      # print(r, g, b)
+      try:
+        rgba_color = (r / 255, g / 255, b / 255)
+        c = Color(rgb=(rgba_color))
+        opPalette.append(c)
+
+      except Exception as e:
+        print(e)
+    
+    return opPalette
+  
   except Exception as e:
     print("Encountered error {} in construction of color palette".format(e))
     
