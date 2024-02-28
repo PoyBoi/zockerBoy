@@ -11,6 +11,17 @@ zockerBoy - Zocket Assignment
     ```
     pip install -r requirements. txt
     ```
+- Run the following command to run the program:
+    ```
+    python main.py --i <location of image to be used> --d <device to be used, 0 for cpu, 1 for cuda device> 
+    ```
+    - There are example images provided inside the "images" folder
+    - Example Usage:
+        ```
+        python main.py --i images/1.jpg --d 0
+        ```
+
+<hr/>
 
 ## Path Taken
 1. Started off with Color Palette detection:
