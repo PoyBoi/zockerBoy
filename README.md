@@ -18,7 +18,7 @@ zockerBoy - Zocket Assignment
     - There are example images provided inside the "images" folder
     - Example Usage:
         ```
-        python main.py --i images/1.jpg --d 0
+        python main.py --i images/1.jpg --d 1
         ```
 
 <hr/>
