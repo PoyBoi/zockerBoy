@@ -15,5 +15,9 @@ else:  # Unix-like systems (macOS, Linux)
     os.system('clear') 
 
 print(
-    "Color pallete is: {}, \n Overlayed text says: {}, \n Objects detected are: {}".format(getPalette, textOCR, objDetection)
+    """
+    Color pallete is: {},
+    Overlayed text says: {},
+    Objects detected are: {}
+    """.format(getPalette, textOCR, objDetection)
 )
