@@ -3,13 +3,9 @@ pillow
 matplotlib
 colorthief
 webcolors
-os
-subprocess
 opencv-python
 colour
 transformers
 mmdet
-io
 argparse
 ultralytics
-contextlib
