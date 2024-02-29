@@ -1,6 +1,7 @@
 # ==============================
 # For the OCR
 import cv2
+import string
 import pytesseract
 from PIL import Image
 from pytesseract import Output
@@ -87,6 +88,9 @@ def get_overlay_box(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocker
   
   img_box = gray_image
   out_txt = ""
+
+  allowed_chars = set(string.ascii_letters + string.digits + " " + "!")
+  
   data = pytesseract.image_to_data(img_box, config=myconfig, output_type=Output.DICT)
   for i in range(len(data['text'])):
     # Need to find threshold value that gets all of the words but leaves out the stupid one worders
@@ -98,7 +102,8 @@ def get_overlay_box(img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zocker
       if x not in ignore_var:
         out_txt += x + " "
   # print(out_txt)
-  return out_txt
+  out_txt_f = "".join(char for char in out_txt if char in allowed_chars)
+  return out_txt_f
 
 def obj_det(qst:str, img_path:str = r"C:\Users\parvs\VSC Codes\Python-root\zockerBoy\image\test_ad.jpg") -> str:
   # can use YOLO or moondream and maybe layer it with openCV
