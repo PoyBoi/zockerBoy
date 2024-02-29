@@ -1,4 +1,6 @@
-from src.main_stem import (get_color_palette, get_overlay_box, object_detection)
+from src.main_stem import (get_color_palette, get_overlay_box,
+                           # object_detection
+                           )
 from src.logo_det import run_det
 import argparse
 import os
@@ -10,7 +12,10 @@ parser.add_argument('-dev', '--d', '-D', type=int, choices=[0, 1, 2], help='This
 args = parser.parse_args()
 
 isAd = 3 # Will change to 4 once logo is added
-# img_path = r'C:\\Users\\parvs\\Downloads\\games_cyberpunk_posters.webp'
+# img_ath = _
+# not ad = .\image\426e417b-a094-46c2-bd39-55a179b42054.png
+# ad = .\image\test_ad.jpg
+# edgeCase = .\image\blinkit.png
 # device = 1
 img_path = args.i 
 device = args.d
@@ -26,7 +31,7 @@ if textOCR == "" or textOCR == " " or textOCR == None:
 else:
     isAd -= 1
 objDetection = run_det(img_path, device)
-if objDetection == None:
+if objDetection == None or objDetection == []:
     None
 else:
     isAd -= 1
