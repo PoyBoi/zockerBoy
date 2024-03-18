@@ -1,5 +1,5 @@
 <h1 align="center">
-zockerBoy - Zocket Assignment
+zockerBoy - AD Detection
 </h1>
 
 <hr/>
