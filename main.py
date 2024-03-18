@@ -9,7 +9,7 @@ import os
 parser = argparse.ArgumentParser()
 parser.add_argument('-img_path', '--i', '-I', type=str, nargs='?', help='Location of the image to be scanned', const=r"image\test_ad.jpg")
 parser.add_argument('-dev', '--d', '-D', type=int, choices=[0, 1, 2], help='This changes usage, 0 for cpu, 1 for cuda, 2 for multi-GPU(not built yet)')
-parser.add_argument('-show_img', '--s', '-S', action='store_true', help='This shows whether to display the input image')
+# parser.add_argument('-show_img', '-s', '-S', help='This shows whether to display the input image', action='store_true')
 
 args = parser.parse_args()
 
@@ -21,13 +21,9 @@ isAd = 3 # Will change to 4 once logo is added
 # device = 1
 img_path = args.i 
 device = args.d
-showImg = args.s
 
-print(img_path, device, showImg)
-
-if showImg is True:
-    imgShow = Image.open(img_path)
-    imgShow.show()
+imgShow = Image.open(img_path)
+imgShow.show()
 
 getPalette = get_color_palette(img_path)
 if getPalette == [] or getPalette == None:
